@@ -18,3 +18,6 @@ https://www.bilibili.com/video/av19145699?from=search&seid=456509998694502607
 
 （5）李宏毅 深度学习理论 Deep Learning Theory
 https://www.bilibili.com/video/av20961661?from=search&seid=4753772315676173168
+
+## 2.使用tensorflow遇到的问题
+（1）训练过程损失一直为nan：数据中包含空值、缺失值
