@@ -23,5 +23,19 @@ https://www.bilibili.com/video/av20961661?from=search&seid=4753772315676173168
 （1）训练过程损失一直为nan：数据中包含空值、缺失值
 
 ## 3.使用Anaconda出现的问题
-（1）快捷方式从开始中消失了怎么办？
-在cmd中切换至‘D:\ProgramData\Anaconda3\Lib’文件夹内，执行python _nsis.py mkmenus  
+#### anaconda prompt快捷方式从开始中消失了怎么办？
+（1） 第一种方式（不一定好使）：在cmd中切换至‘D:\ProgramData\Anaconda3\Lib’文件夹内，执行python _nsis.py mkmenus 
+
+（2） 第二种方式（https://blog.csdn.net/ziv_jiaung/article/details/84196557）：
+随便复制一个快捷方式，修改目标成这样：  
+
+    C:\Windows\System32\cmd.exe "/K" D:\ProgramData\Anaconda3\Scripts\activate.bat D:\ProgramData\Anaconda3  
+
+上面包括三部分：第一部分指向系统的命令行exe文件，第二部分指向安装的anaconda目录下相应环境的激活批处理文件activate.bat，第三部分为anaconda对应环境的根目录
+
+我是为了使用tensorboard，它只安装在了之前创建的一个叫python35的环境中，所以构造的链接如下：
+
+    C:\Windows\System32\cmd.exe "/K" D:\ProgramData\Anaconda3\envs\python35\Scripts\activate.bat D:\ProgramData\Anaconda3\envs\python35
+
+
+
