@@ -22,8 +22,11 @@ https://www.bilibili.com/video/av20961661?from=search&seid=4753772315676173168
 ## 2.使用tensorflow遇到的问题
 #### (1)训练过程损失一直为nan：数据中包含空值、缺失值
 
-#### (2)tensorboard必须在tensorflow运行后再打开，否则会无法理解报错
-顺序使先写好tensorflow程序并运行，然后在终端启动tensorboard，启动后无法在修改summary部分，否则会报如下错误，无法理解：
+#### (2)tensorflow程序中包含首次运行成功，第二次运行报无法理解的错误
+
+应该是程序中包含FileWriter操作，具体原因还不明白，但每次运行重启kernel可解决此现象
+
+报错样例如下：
 
         InvalidArgumentError: You must feed a value for placeholder tensor 'Network/input' with dtype float and shape [?,25]
 
