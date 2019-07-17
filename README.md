@@ -20,7 +20,12 @@ https://www.bilibili.com/video/av19145699?from=search&seid=456509998694502607
 https://www.bilibili.com/video/av20961661?from=search&seid=4753772315676173168
 
 ## 2.使用tensorflow遇到的问题
-（1）训练过程损失一直为nan：数据中包含空值、缺失值
+#### (1)训练过程损失一直为nan：数据中包含空值、缺失值
+
+#### (2)tensorboard必须在tensorflow运行后再打开，否则会无法理解报错
+顺序使先写好tensorflow程序并运行，然后在终端启动tensorboard，启动后无法在修改summary部分，否则会报如下错误，无法理解：
+
+        InvalidArgumentError: You must feed a value for placeholder tensor 'Network/input' with dtype float and shape [?,25]
 
 ## 3.使用Anaconda出现的问题
 #### anaconda prompt快捷方式从开始中消失了怎么办？
