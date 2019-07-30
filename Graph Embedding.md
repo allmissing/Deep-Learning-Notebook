@@ -18,4 +18,6 @@
       https://blog.csdn.net/qq_24003917/article/details/80389995  
     Skip-Gram的tensorflow实现：  
       https://blog.csdn.net/qq_24003917/article/details/80390005  
+    embedding_lookup的理解：  
+        https://www.zhihu.com/question/48107602  
       
